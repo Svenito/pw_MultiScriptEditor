@@ -14,7 +14,7 @@ try:
         # pytest resets the stream at the end - causes troubles. Since after
         # every output the stream is reset automatically we don't need this.
         initialise.atexit_done = True
-        init()
+        init(wrap=False)
 except ImportError:
     class Fore(object):
         RED = ''
